@@ -19,9 +19,9 @@ const enemyImgArray = new Array(2).fill(0).map((_, i) => {
   return enemyImg;
 });
 
-const bgImgArray = new Array(17).fill(0).map((_, i) => {
+const bgImgArray = new Array(8).fill(0).map((_, i) => {
   const bgImg = new Image();
-  bgImg.src = `./assets/background${i + 1}.jpg`
+  bgImg.src = `./assets/bg${i + 1}.jpg`
   return bgImg;
 });
 
@@ -130,7 +130,7 @@ function update() {
 };
 
 // Dibujar elementos en el canvas
-const randomBgImg = Math.round(Math.random() * 17);
+const randomBgImg = Math.round(Math.random() * 8);
 const randomEnemyImg = Math.round(Math.random() * 2);
 function draw() {
     ctx.drawImage(bgImgArray[randomBgImg], 0, 0, canvas.width, canvas.height);
