@@ -3,8 +3,8 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 let gameOver = false;
 
-canvas.width = window.innerWidth - 20;
-canvas.height = window.innerHeight - 20;
+canvas.width = 680;
+canvas.height = 560;
 
 // Cargar imágenes
 const playerImg = new Image();
@@ -138,5 +138,9 @@ function gameLoop() {
 
 // Iniciar el juego cuando se carguen las imágenes
 window.onload = () => {
+    document.querySelector('#welcome').style.opacity = '0';
+    setTimeout(() => {
+      document.querySelector('#welcome').remove();
+    }, 3000);
     gameLoop();
 };
