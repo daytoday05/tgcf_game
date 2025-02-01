@@ -13,16 +13,17 @@ playerImg.src = "./assets/player.png";
 const bulletImg = new Image();
 bulletImg.src = "./assets/bullet.png";
 
-const enemyImg = new Image();
-enemyImg.src = "./assets/enemy.png";
+const enemyImgArray = new Array(2).fill(0).map((_, i) => {
+  const enemyImg = new Image();
+  enemyImg.src = `./assets/enemy${i + 1}.png`
+  return enemyImg;
+});
 
-const bgImgArray = [];
-
-for (let i = 1; i < 18; i++) {
-  const backgroundImg = new Image();
-  backgroundImg.src = `./assets/background${i}.jpg`;
-  bgImgArray.push(backgroundImg);
-};
+const bgImgArray = new Array(17).fill(0).map((_, i) => {
+  const bgImg = new Image();
+  bgImg.src = `./assets/background${i + 1}.jpg`
+  return bgImg;
+});
 
 // Variables del jugador
 const player = {
@@ -130,6 +131,7 @@ function update() {
 
 // Dibujar elementos en el canvas
 const randomBgImg = Math.round(Math.random() * 17);
+const randomEnemyImg = Math.round(Math.random() * 2);
 function draw() {
     ctx.drawImage(bgImgArray[randomBgImg], 0, 0, canvas.width, canvas.height);
     ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
@@ -139,7 +141,7 @@ function draw() {
     });
 
     enemies.forEach(enemy => {
-        ctx.drawImage(enemyImg, enemy.x, enemy.y, enemy.width, enemy.height);
+        ctx.drawImage(enemyImgArray[randomEnemyImg], enemy.x, enemy.y, enemy.width, enemy.height);
     });
 }
 
