@@ -145,9 +145,11 @@ function gameLoop() {
 
 // Iniciar el juego cuando se carguen las imágenes
 window.onload = () => {
+  setTimeout(() => {
     document.querySelector('#welcome').style.opacity = '0';
     setTimeout(() => {
       document.querySelector('#welcome').remove();
     }, 3000);
     gameLoop();
+  }, 2000);
 };
