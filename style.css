@@ -7,7 +7,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #1f1f1f;
     font-size: 3vmin;
 }
 
@@ -25,9 +25,30 @@ body {
 }
 
 .welcome h1 {
-  font-size: 1.4em;
-  font-family: sans-serif;
+  color: black;
+  font-size: 1.6em;
+  font-family: cursive;
   text-transform: uppercase;
+}
+
+.game-over {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  transition: 3s ease;
+  background-color: black;
+}
+
+.game-over div * {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 2em;
 }
 
 canvas {

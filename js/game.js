@@ -38,6 +38,7 @@ const enemySpeed = 5;
 
 // Controles del jugador
 document.addEventListener("keydown", (event) => {
+    if (event.key === "f") document.location.reload();
     if (event.key === "ArrowLeft") player.movingLeft = true;
     if (event.key === "ArrowRight") player.movingRight = true;
     if (event.key === " ") {
@@ -54,6 +55,12 @@ document.addEventListener("keyup", (event) => {
     if (event.key === "ArrowLeft") player.movingLeft = false;
     if (event.key === "ArrowRight") player.movingRight = false;
 });
+
+// Función para retrasar acciones del sistema
+function sleep (milliSeconds = 500) {
+  const limit = Date.now() + milliSeconds;
+  while (Date.now() < limit);
+};
 
 // Función principal del juego
 function update() {
@@ -108,13 +115,13 @@ function update() {
             player.y < enemy.y + enemy.height &&
             player.y + player.height > enemy.y
         ) {
-            alert("¡Perdiste! Recarga para jugar de nuevo.");
-            document.location.reload();
+            gameOver = true;
+            document.querySelector('#game-over').style.display = 'flex';
         }
     });
 
     draw();
-}
+};
 
 // Dibujar elementos en el canvas
 function draw() {
@@ -132,8 +139,8 @@ function draw() {
 
 // Bucle del juego
 function gameLoop() {
-    update();
-    requestAnimationFrame(gameLoop);
+  update();
+  requestAnimationFrame(gameLoop);
 }
 
 // Iniciar el juego cuando se carguen las imágenes
