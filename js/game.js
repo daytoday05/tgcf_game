@@ -3,8 +3,8 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 let gameOver = false;
 
-canvas.width = 680;
-canvas.height = 560;
+canvas.width = window.innerWidth - 20;
+canvas.height = window.innerHeight - 20;
 
 // Cargar imágenes
 const playerImg = new Image();
