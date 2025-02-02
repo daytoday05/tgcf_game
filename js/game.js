@@ -16,8 +16,21 @@ bulletImg.src = "./assets/bullet.png";
 const enemyImg = new Image();
 enemyImg.src = './assets/enemy.png';
 
+const bgImgList = [
+    "236x/3e/3e/29/3e3e29232bbf15b4a631065871848a28.jpg", "736x/54/45/0c/54450c72def5ee8ca4b9d4cd05a4b95d.jpg",
+    "236x/f3/d2/92/f3d2924ae8e8616bd4454e30e56a3523.jpg", "736x/5e/95/f9/5e95f9e3b6e6a349711fa1b3af10e18d.jpg",
+    "736x/d7/42/bc/d742bc0f332915b240648b266169b7f4.jpg", "736x/ce/d7/27/ced727a1582033c2b2e2f61bcb219e50.jpg",
+    "736x/be/9b/3c/be9b3c72ede8af0e4303e4d260eb61af.jpg", "236x/3c/3e/25/3c3e255144c6a7b74917ff9de157743a.jpg",
+    "736x/fc/ba/b0/fcbab08912dd415e554adc9f346034ea.jpg", "736x/1a/38/96/1a389653ad6eb905eb75db477b83e13b.jpg",
+    "736x/7d/6f/db/7d6fdbe6acbcc25f4ddd79c3d9d22436.jpg", "736x/db/ec/6d/dbec6d532cab1bca96c2e7a7014ee9a0.jpg",
+    "736x/d6/22/8a/d6228a93c009bd59130c9a99ae1e604d.jpg", "736x/05/47/b1/0547b111ece7404d5f179675b9ff7b0d.jpg",
+    "236x/08/62/5d/08625dddcf25f7cc0eee8c8dce8ff680.jpg", "236x/14/3b/a0/143ba036b249a57e3aaae2276b759c63.jpg",
+    "736x/99/76/6a/99766ab4457513b5a98b94177595c2f1.jpg", "736x/0e/bd/74/0ebd74aa0c1ca4aa625653d7d09aef10.jpg",
+    "236x/b8/03/e1/b803e1eb15ffb0d8f7cc93842dafa881.jpg", "736x/d2/8c/cb/d28ccb13873d0edf278297137475cd6b.jpg"
+];
+
 const bgImg = new Image();
-bgImg.src = './assets/background.jpg';
+bgImg.src = `https://i.pinimg.com/${bgImgList[Math.round(Math.random() * (bgImgList.length - 1))]}`;
 
 // Variables del jugador
 const player = {
