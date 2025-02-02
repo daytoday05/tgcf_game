@@ -8,13 +8,13 @@ canvas.height = 560;
 
 // Cargar imágenes
 const playerImg = new Image();
-playerImg.src = "./assets/player.png";
+playerImg.src = "assets/img/player.png";
 
 const bulletImg = new Image();
-bulletImg.src = "./assets/bullet.png";
+bulletImg.src = "assets/img/bullet.png";
 
 const enemyImg = new Image();
-enemyImg.src = './assets/enemy.png';
+enemyImg.src = 'assets/img/enemy.png';
 
 const bgImgList = [
     "236x/3e/3e/29/3e3e29232bbf15b4a631065871848a28.jpg", "736x/54/45/0c/54450c72def5ee8ca4b9d4cd05a4b95d.jpg",
