@@ -43,7 +43,7 @@ span {
   color: black;
   font-size: 1.6em;
   font-family: cursive;
-  text-transform: uppercase;
+  font-style: italic;
 }
 
 .game-over {
@@ -55,5 +55,5 @@ span {
   display: block;
   color: white;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.45em;
 }
